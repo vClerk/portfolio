@@ -91,7 +91,11 @@ export default function Contact() {
     <section id="contact" className="py-20 bg-gradient-to-b from-background/50 to-background relative overflow-hidden">
       {/* 3D Background */}
       <div className="absolute inset-0 z-0 opacity-30">
-        <Scene camera={{ position: [0, 0, 8], fov: 60 }} controls={false}>
+        <Scene 
+          camera={{ position: [0, 0, 8], fov: 60 }} 
+          controls={false}
+          loadingText="Loading Contact Background..."
+        >
           <FloatingObject position={[-4, 2, -3]} type="sphere" color="#3b82f6" scale={0.5} speed={0.3} />
           <FloatingObject position={[4, -1, -2]} type="torus" color="#8b5cf6" scale={0.3} speed={0.5} />
           <FloatingObject position={[-2, -3, 1]} type="box" color="#06b6d4" scale={0.4} speed={0.4} />

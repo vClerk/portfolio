@@ -40,7 +40,11 @@ export default function Hero() {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* 3D Background */}
       <div className="absolute inset-0 z-0">
-        <Scene camera={{ position: [0, 0, 8], fov: 75 }} controls={false}>
+        <Scene 
+          camera={{ position: [0, 0, 8], fov: 75 }} 
+          controls={false}
+          loadingText="Loading 3D Background..."
+        >
           <ParticleField />
           <FloatingObject position={[-3, 2, -2]} type="sphere" color="#3b82f6" scale={0.8} speed={0.8} />
           <FloatingObject position={[3, -1, -1]} type="box" color="#8b5cf6" scale={0.6} speed={1.2} />

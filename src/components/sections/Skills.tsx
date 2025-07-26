@@ -115,7 +115,11 @@ export default function Skills() {
 
           {/* 3D Skills Visualization */}
           <motion.div variants={itemVariants} className="relative h-96 rounded-xl overflow-hidden">
-            <Scene camera={{ position: [0, 0, 6], fov: 60 }} controls={true}>
+            <Scene 
+              camera={{ position: [0, 0, 6], fov: 60 }} 
+              controls={true}
+              loadingText="Loading Interactive Skills..."
+            >
               {skillCategories.map((category, index) => (
                 <FloatingObject
                   key={category.title}
@@ -129,7 +133,7 @@ export default function Skills() {
             </Scene>
             
             {/* Overlay Text */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
               <div className="text-center space-y-2 bg-black/30 backdrop-blur-sm p-6 rounded-lg">
                 <h3 className="text-2xl font-bold text-white">Interactive 3D Skills</h3>
                 <p className="text-gray-300">Drag to explore different skill categories</p>

@@ -71,7 +71,7 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-background to-background/50">
+    <section id="about" className="py-20 bg-gradient-to-b from-background to-card/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -94,8 +94,8 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Bio Section */}
             <motion.div variants={itemVariants} className="space-y-6">
-              <h3 className="text-2xl font-bold text-white">My Journey</h3>
-              <div className="space-y-4 text-gray-300 leading-relaxed">
+              <h3 className="text-2xl font-bold text-foreground">My Journey</h3>
+              <div className="space-y-4 text-foreground/80 leading-relaxed">
                 <p>
                   I&apos;m a passionate developer with a love for creating immersive digital experiences. 
                   My journey in web development began with curiosity about how websites work, and it has 
@@ -131,7 +131,7 @@ export default function About() {
 
             {/* Timeline */}
             <motion.div variants={itemVariants} className="space-y-6">
-              <h3 className="text-2xl font-bold text-white">Experience Timeline</h3>
+              <h3 className="text-2xl font-bold text-foreground">Experience Timeline</h3>
               <div className="relative">
                 {/* Timeline Line */}
                 <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 to-purple-600"></div>
@@ -154,9 +154,9 @@ export default function About() {
                         <div className="flex items-center space-x-2 mb-1">
                           <span className="text-sm font-medium text-blue-400">{item.year}</span>
                         </div>
-                        <h4 className="text-lg font-semibold text-white">{item.title}</h4>
+                        <h4 className="text-lg font-semibold text-foreground">{item.title}</h4>
                         <p className="text-blue-300 text-sm mb-2">{item.company}</p>
-                        <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
+                        <p className="text-foreground/60 text-sm leading-relaxed">{item.description}</p>
                       </div>
                     </motion.div>
                   ))}
